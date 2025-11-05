@@ -53,27 +53,27 @@ binds:
         mcpAuthorization:
           rules:
           - mcp.tool.name == "get_exchange_rate" || mcp.tool.name == "get_current_date"
-# - port: 3002
-#   listeners:
-#   - protocol: HTTP
-#     name: a2a_agent_server
-#     hostname: localhost
-#     routes:
-#     - hostnames: []
-#       matches:
-#       - path:
-#           pathPrefix: /
-#       backends:
-#       - host: localhost:8002
-#       name: a2a_server_route
-#       policies:
-#         a2a: {}
-#         cors:
-#           allowCredentials: false
-#           allowHeaders: ['*']
-#           allowMethods: []
-#           allowOrigins: ['*']
-#           exposeHeaders: []
-#           maxAge: null
+- port: 3002
+  listeners:
+  - protocol: HTTP
+    name: a2a_agent_server
+    hostname: localhost
+    routes:
+    - hostnames: []
+      matches:
+      - path:
+          pathPrefix: /
+      backends:
+      - host: localhost:8002
+      name: a2a_server_route
+      policies:
+        a2a: {}
+        cors:
+          allowCredentials: false
+          allowHeaders: ['*']
+          allowMethods: []
+          allowOrigins: ['*']
+          exposeHeaders: []
+          maxAge: null
 
     
